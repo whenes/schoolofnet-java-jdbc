@@ -1,0 +1,13 @@
+package com.schoolofnet.javajdbc;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	if (new ConnectionFactoryOld().getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    	if (ConnectionFactory.getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    }
+}

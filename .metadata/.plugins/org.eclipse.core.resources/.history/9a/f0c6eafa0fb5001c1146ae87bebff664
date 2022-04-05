@@ -1,0 +1,18 @@
+package com.schoolofnet.javajdbc.models;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class UsersDAO {
+	private Connection con;
+	private PreparedStatement ps;
+	
+	public UsersDAO () { 
+		
+	}
+	
+	public List<Users> findAll() throws SQLException {
+		String query = "SELECT * FROM users";
+	}
+}

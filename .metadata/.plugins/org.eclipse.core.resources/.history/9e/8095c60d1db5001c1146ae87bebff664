@@ -1,0 +1,38 @@
+package com.schoolofnet.javajdbc.v2;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class App {
+	public static void main(String[] args) throws SQLException {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("--MENU--");
+		System.out.println("1 - List movie");
+		System.out.println("2 - Create movie");
+		System.out.println("3 - Update movie");
+		System.out.println("4 - Delete movie");
+		System.out.println("--MENU--");
+		
+		int choice = scanner.nextInt();
+		
+		switch (choice) {
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			
+			break;
+
+		default:
+			System.out.println("Invalid option");
+			break;
+		}
+	}
+}

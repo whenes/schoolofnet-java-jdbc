@@ -1,0 +1,5 @@
+package com.schoolofnet.javajdbc.models;
+
+public class UsersDAO {
+
+}

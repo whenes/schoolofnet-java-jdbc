@@ -1,0 +1,24 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	if (new ConnectionFactoryOld().getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    	if (ConnectionFactory.getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    	
+    	try {
+    		String query = "SELECT * FROM users WHERE id = ?";
+    		PreparedStatement preparedStatement = ConnectionFactory.getConnection().prepareStatement(query);
+			preparedStatement.executeQuery(query);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    }
+}

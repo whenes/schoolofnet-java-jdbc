@@ -1,0 +1,13 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "root");
+    	
+    }
+}

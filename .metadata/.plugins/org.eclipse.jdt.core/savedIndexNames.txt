@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/home/whenes/workspaces/codeeducation_schoolofnet/java/java-jdbc/.metadata/.plugins/org.eclipse.jdt.core
+951599970.index
+917987203.index
+3544314038.index
+4256774102.index
+4143945709.index

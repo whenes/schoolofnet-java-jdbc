@@ -1,0 +1,12 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.SQLException;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	if (new ConnectionFactory().getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    }
+}

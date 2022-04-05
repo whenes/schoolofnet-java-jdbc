@@ -1,0 +1,51 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.schoolofnet.javajdbc.models.Users;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	if (new ConnectionFactoryOld().getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    	if (ConnectionFactory.getConnection() != null) {
+    		System.out.println("Connected");
+    	}
+    	
+    	try {
+//    		String query = "SELECT * FROM users WHERE id = ? AND name = ?";
+//    		PreparedStatement é usado para DML enquanto que o Statement para DDL
+//    		PreparedStatement preparedStatement = ConnectionFactory.getConnection().prepareStatement(query);
+//			preparedStatement.setInt(1, 1);
+//			preparedStatement.setString(2, "Whenes");
+//    		preparedStatement.executeQuery();
+    		
+//    		String query = "SELECT * FROM users";
+//    		PreparedStatement preparedStatement = ConnectionFactory.getConnection().prepareStatement(query);
+//    		
+//    		ResultSet rs = preparedStatement.executeQuery();
+//    		while (rs.next()) {
+//    			System.out.println(rs.getInt("id"));
+//    			System.out.println(rs.getString("name"));
+//    		}
+    		
+    		String query = "SELECT * FROM users";
+    		PreparedStatement preparedStatement = ConnectionFactory.getConnection().prepareStatement(query);
+    		
+    		ResultSet rs = preparedStatement.executeQuery();
+    		List<Users> users = new ArrayList<Users>();
+    		
+    		while (rs.next()) {
+    			System.out.println(rs.getInt("id"));
+    			System.out.println(rs.getString("name"));
+    		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    }
+}

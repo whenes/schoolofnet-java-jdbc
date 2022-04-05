@@ -1,0 +1,13 @@
+package com.schoolofnet.javajdbc.v2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jc.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

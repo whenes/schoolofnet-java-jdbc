@@ -1,0 +1,7 @@
+package com.schoolofnet.javajdbc.v2;
+
+public class DDLCreateDropMain {
+	public static void main(String[] args) {
+		
+	}
+}

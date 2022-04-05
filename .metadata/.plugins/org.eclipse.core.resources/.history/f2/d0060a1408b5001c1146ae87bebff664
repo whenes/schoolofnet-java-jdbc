@@ -1,0 +1,17 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class ConnectionFactory {
+
+	private Connection con = null;
+	
+	public Connection getConnection() {
+		try {
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

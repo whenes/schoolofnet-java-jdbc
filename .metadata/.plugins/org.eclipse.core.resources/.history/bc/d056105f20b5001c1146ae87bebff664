@@ -1,0 +1,39 @@
+package com.schoolofnet.javajdbc.v2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieDAO {
+	private Connection connection = null;
+	private PreparedStatement preparedStatement = null;
+	public MovieDAO() {
+		connection = new ConnectionFactory().getConnection();
+	}
+
+	public List<Movie> findAll() throws SQLException {
+		String query = "SELECT * FROM movie";
+		List<Movie> movies = new ArrayList<Movie>();
+		preparedStatement = connection.prepareStatement(query);
+		ResultSet rs = preparedStatement.executeQuery();
+		while(rs.next()) {
+			movies.add(new Movie(rs.getInt("id"), rs.getString("name")));
+		}
+		return movies;
+	}
+	
+	public void insert(Movie movie) {
+		String query = " "
+	}
+	
+	public void update(Movie movieOld, Movie movieNew) {
+		
+	}
+	
+	public void delete(Movie movie) {
+		
+	}
+}

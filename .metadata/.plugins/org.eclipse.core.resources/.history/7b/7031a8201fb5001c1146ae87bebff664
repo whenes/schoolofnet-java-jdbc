@@ -1,0 +1,15 @@
+package com.schoolofnet.javajdbc.v2;
+
+import java.sql.Connection;
+
+public class MovieDAO {
+	private Connection connection = null;
+	
+	public MovieDAO() {
+		connection = new ConnectionFactory().getConnection();
+	}
+
+	public List<Movie> findAll() {
+		
+	}
+}

@@ -1,0 +1,51 @@
+package com.schoolofnet.javajdbc.v2;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Scanner;
+
+public class App {
+	public static void main(String[] args) throws SQLException {
+		MovieDAO movieDAO = new MovieDAO();
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("--MENU--");
+		System.out.println("1 - List movie");
+		System.out.println("2 - Create movie");
+		System.out.println("3 - Update movie");
+		System.out.println("4 - Delete movie");
+		System.out.println("--MENU--");
+		
+		int choice = scanner.nextInt();
+		
+		switch (choice) {
+		case 1:
+			List<Movie> movies = movieDAO.findAll();
+			for (Movie movie : movies) {
+				System.out.println(movie.toString());
+			}
+			break;
+		case 2:
+			System.out.println("Enter name:");
+			movieDAO.insert(new Movie(scanner.nextLine()));
+			break;
+		case 3:
+			System.out.println("Enter id and name");
+			Movie movie = new Movie();
+			movie.setId(scanner.nextInt());
+			scanner.next();
+			movie.setName(scanner.nextLine());
+			movieDAO.update(null, movie);
+			break;
+		case 4:
+			System.out.println("Enter id");
+			movieDAO.delete(new Movie(scanner.nextInt(),null));
+			break;
+
+		default:
+			System.out.println("Invalid option");
+			break;
+		}
+	}
+}

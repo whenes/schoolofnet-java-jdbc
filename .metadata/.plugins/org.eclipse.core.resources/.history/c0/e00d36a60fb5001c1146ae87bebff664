@@ -1,0 +1,9 @@
+package com.schoolofnet.javajdbc.models;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class UsersDAO {
+	private Connection con;
+	private PreparedStatement ps;
+}

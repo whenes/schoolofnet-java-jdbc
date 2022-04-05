@@ -1,0 +1,33 @@
+package com.schoolofnet.javajdbc.v2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieDAO {
+	private Connection connection = null;
+	private PreparedStatement preparedStatement = null;
+	public MovieDAO() {
+		connection = new ConnectionFactory().getConnection();
+	}
+
+	public List<Movie> findAll() {
+		String queyr = "SELET * FROM movie";
+		List<Movie> movies = new ArrayList<Movie>();
+		preparedStatement = connection.prepareStatement(queyr);
+		ResultSet rs = preparedStatement.executeQuery();
+	}
+	
+	public void insert(Movie movie) {
+		
+	}
+	
+	public void update(Movie movieOld, Movie movieNew) {
+		
+	}
+	
+	public void delete(Movie movie) {
+		
+	}
+}

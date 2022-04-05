@@ -1,0 +1,12 @@
+package com.schoolofnet.javajdbc;
+
+import java.sql.Connection;
+
+public class ConnectionFactory {
+
+	private Connection con = null;
+	
+	public Connection getConnection() {
+		return this.con;
+	}
+}
